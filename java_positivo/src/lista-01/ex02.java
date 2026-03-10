@@ -21,7 +21,7 @@ public class ex02 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Digite a porcentagem do IPI (ex: 10): ");
+        System.out.println("Digite o IPI (ex: 10): ");
         double ipi = entrada.nextDouble();
 
 // PRODUTO 1
