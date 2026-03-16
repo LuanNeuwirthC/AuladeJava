@@ -23,7 +23,7 @@ JAVA_POSITIVO/                 # Pasta raiz do ambiente
         └── lista-01/          # Pasta da primeira lista de exercícios
             ├── ex01.java      #  ex01
 
-       ( próximas listas serão adicionadas aqui)
+      
 
         └── Main.java          # Classe principal de teste
 ```

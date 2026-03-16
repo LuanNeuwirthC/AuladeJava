@@ -1,3 +1,4 @@
+package ex03;
 //**  Criar uma classe "ContaBancaria" com os atributos titular, número da conta e saldo.
 //**  Adicione métodos para depositar, sacar e imprimir o saldo da conta
 

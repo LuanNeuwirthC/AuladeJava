@@ -1,3 +1,4 @@
+package ex02;
 public class Livro {
     String titulo, autor;
     int anoPublicacao;
