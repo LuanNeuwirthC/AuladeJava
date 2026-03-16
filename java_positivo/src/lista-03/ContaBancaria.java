@@ -1,4 +1,5 @@
 public class ContaBancaria {
+   
     String titular, nConta;
     double saldo;
 
@@ -18,12 +19,12 @@ public class ContaBancaria {
     }
 
     public void sacar(Double valor){
-        this.saldo = saldo - valor;
         if (valor > saldo) {
             System.out.println("erro...");
-        } 
+        } else {
+            this.saldo = saldo - valor;
         }
-    
+    }
     
     public void imprimirValor(){
                 System.out.println(saldo);
