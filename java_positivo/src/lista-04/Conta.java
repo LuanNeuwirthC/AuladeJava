@@ -73,7 +73,7 @@
         public void sacar(double valor){ 
             if (valor > 0 && valor <= saldo){ 
                  saldo -= valor; 
-             System.out.println("Saque relaziado com sucesso"); 
+             System.out.println("Saque realizado com sucesso"); 
             }else{ 
               System.out.println("Valor de saque invalido ou saldo insuficiente"); 
     
