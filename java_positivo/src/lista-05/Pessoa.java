@@ -6,7 +6,6 @@ public class Pessoa {
     private LocalDate dataNascimento;
     private String email;
 
-
     public Pessoa(String nome, String sobrenome, LocalDate dataNascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -41,13 +40,37 @@ public class Pessoa {
         return email;
     }
 
-        private boolean validarEmail(String emailTest) {
-            if (emailTest == null || emailTest.isEmpty()) {
-                return false;
-            }
-            int posicaoArroba = emailTest.indexOf("@");
-            int posicaoPonto = emailTest.indexOf(".");
-        }
+    private int idade() {
+        return Period.between(dataNascimento, LocalDate.now()).getYears();
+    }
 
-    
+    private boolean validaEmail() {
+        if (this.email == null || this.email.isEmpty()) {
+            return false;
+        }
+        int posicaoArroba = this.email.indexOf("@");
+        int posicaoPonto = this.email.lastIndexOf(".");
+
+        return posicaoArroba > 0 && posicaoPonto > posicaoArroba;
+    }
+
+    public void adicionarEmail(String email) {
+        String emailTemporario = this.email;
+        this.email = email;
+
+        if (!validaEmail()) {
+            this.email = emailTemporario;
+            System.out.println("E-mail inválido. Não foi adicionado.");
+        }
+    }
+
+    public String getInformacoes() {
+        return "Nome: " + nome + " " + sobrenome +
+               " | Idade: " + idade() +
+               " | email: " + email;
+    }
+
+    public boolean maior() {
+        return idade() >= 18;
+    }
 }
