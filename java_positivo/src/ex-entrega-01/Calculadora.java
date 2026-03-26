@@ -1,4 +1,3 @@
-
 /**
  * Implemente uma classe chamada Calculadora que contenha métodos para realizar operações matemáticas  
  * (adição, subtração, multiplicação, divisão, potenciação e fatorial).
@@ -15,6 +14,18 @@ public class Calculadora {
     private int num1;
     private int num2;
 
+
+    public Calculadora(int num1, int num2) {
+            
+            if (num1 < 0 || num1 > 50 || num2 < 0 || num2 > 50) {
+              System.out.println("Erro: Número inválido! Deve ser entre 0 e 50.");
+                this.num1 = 0;
+                this.num2 = 0;
+            } else {
+                this.num1 = num1;
+                this.num2 = num2;
+            }
+        }
 
 
     public int somar() {
