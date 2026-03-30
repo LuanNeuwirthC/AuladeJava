@@ -1,4 +1,3 @@
-// Arquivo: Agenda.java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ public class Agenda {
         for (Contato c : contatos) {
             // Valida ignorando letras maiúsculas/minúsculas
             if (c.getNome().equalsIgnoreCase(novoContato.getNome())) {
-                System.out.println("Erro: O contato '" + novoContato.getNome() + "' já existe na agenda!");
+                System.out.println("Erro: O contato " + novoContato.getNome() + "' já existe na agenda!");
                 return false; 
             }
         }
